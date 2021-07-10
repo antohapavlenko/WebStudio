@@ -1,0 +1,65 @@
+:root {
+    --main-text-color: #757575
+    --title-text-color: #212121  
+    --accent-color: #2196F3  
+} 
+
+ul {
+    list-style: none;
+}
+
+.background-photo {
+   background-color: #2F303A;
+   color: white;
+}
+
+.order {
+    color: white;
+    background-color: #2196F3;
+}
+
+.logo {
+    color: #2196F3;
+    font-size: 26px;
+    line-height: 31px;  
+}
+.logo-2 {
+    color: #212121;
+    font-size: 26px;
+    line-height: 31px;
+}
+
+p, a{
+    color: var(--main-text-color);
+}
+
+h2, h3 {
+    color:  var(--title-text-color); 
+}
+
+.team-bg {
+    background-color: #F5F4FA;
+}
+
+footer {
+    background-color: #2F303A;
+    
+}
+
+.logo-3 {
+    color: #ffffff;
+    font-size: 26px;
+    line-height: 31px;
+}
+
+.footer-addres {
+    color: #ffffff;
+}
+
+.footer-mail {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-tel {
+    color: rgba(255, 255, 255, 0.6);;
+}
