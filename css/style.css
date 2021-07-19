@@ -1,84 +1,97 @@
 :root {
-    --main-text-color: #757575;
-    --title-text-color: #212121;
+    --main-color: #757575;
+    --title-color: #212121;
     --accent-color: #2196F3;
-    --additional-text-color: #ffffff;
+    --additional-color: #ffffff;
+    --background-color: #E5E5E5;
+    --background-team: #F5F4FA;
+    --background-hero: #2F303A;
+    --background-hover: #188CE8;
+    --logo-color: #000000;
 } 
 
-/* Основные цвета текста */
-.title-text {
-    color: var(--title-text-color);
-}
-
-.main-text {
-    color: var(--main-text-color)
-}
-
-.accent-color {
+/* Общие классы */
+.logo {
     color: var(--accent-color);
-}
-
-.additional-color {
-    color: var(--additional-text-color);
-}
-
-
-/* Общие стили */
-body {
     text-decoration: none;
 }
-
-ul {
+ li {
     list-style: none;
 }
 
-
-
-/*контейнер заказ услуги */
-.background {
-    background-color: #2F303A;
-    color: var(--additional-text-color);
+.link {
+    color: var(--title-color);
+    text-decoration: none;
 }
 
-.order {
-    background-color: #2196F3;
-    color: var(--additional-text-color);
-}
-
-/* контейнер Наша команда */
-.our-team {
-    background-color: #F5F4FA;
-}
-
-/* Подсветка ссылок и кнопок */
-
-.activity:hover, .activity:active {
+.link:hover {
     color: var(--accent-color);
 }
 
-/* подвал */
+.link:focus {
+    color: var(--accent-color);
+}
+
+.contact-link {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: var(--accent-color);
+}
+
+.contact-link:focus {
+    color: var(--accent-color);
+}
+
+.title {
+    color: var(--title-color);
+}
+
+.text {
+    color: var(--main-color);
+}
+/* шапка */
+.header-logo {
+    color: var(--logo-color);
+}
+
+
+/* Герой */
+.hero {
+    background-color: var(--background-hero);
+}
+
+.button {
+    background-color: var(--accent-color);
+}
+
+.button:hover, .button:focus {
+    background-color: var(--background-hover);
+}
+
+.hero-title {
+    color: var(--additional-color);
+}
+
+/* Подвал  */
 footer {
-    background-color: #2F303A;
+    background-color: var(--background-hero);
+}
+
+.footer-logo {
+    color: var(--additional-color);
 }
 
 .footer-text {
-    color: var(--additional-text-color);
+    color: var(--additional-color);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer > .contact-link {
+    color: rgba(255, 255, 255, 0.6);;
+    text-decoration: none;
+}
 
 
 
