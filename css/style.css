@@ -11,48 +11,33 @@
 } 
 
 /* Общие классы */
-.logo {
-    color: var(--accent-color);
-    text-decoration: none;
-}
  li {
     list-style: none;
 }
-
-.link {
+.link {                         
     color: var(--title-color);
     text-decoration: none;
 }
-
-.link:hover {
+.link:hover, .link:focus{
     color: var(--accent-color);
 }
-
-.link:focus {
-    color: var(--accent-color);
-}
-
 .contact-link {
     color: var(--main-color);
     text-decoration: none;
 }
-
-.contact-link:hover {
-    color: var(--accent-color);
-}
-
-.contact-link:focus {
-    color: var(--accent-color);
-}
-
 .title {
     color: var(--title-color);
 }
-
 .text {
     color: var(--main-color);
 }
+
+
 /* шапка */
+.logo {
+    color: var(--accent-color);
+    text-decoration: none;
+}
 .header-logo {
     color: var(--logo-color);
 }
@@ -75,19 +60,26 @@
     color: var(--additional-color);
 }
 
+
+/* Портфолио */
+.contact-link:hover, .contact-link:focus {
+    color: var(--accent-color);
+}
+.link-button:hover, .link-button:focus {
+    background-color: var(--accent-color);
+}
+
+
 /* Подвал  */
 footer {
     background-color: var(--background-hero);
 }
-
 .footer-logo {
     color: var(--additional-color);
 }
-
 .footer-text {
     color: var(--additional-color);
 }
-
 footer > .contact-link {
     color: rgba(255, 255, 255, 0.6);;
     text-decoration: none;
