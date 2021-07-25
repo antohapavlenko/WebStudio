@@ -17,7 +17,43 @@ body {
     letter-spacing: 0.03em;
 }
 
+h1, h2, h3, h4, h5, h6, p, ul{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 /* ШАПКА */
+
+.menu, .contacts, .nav {
+    display: flex;
+    padding-left: 0;
+    align-items: center;
+}
+
+.header .container {
+    display: flex;
+}
+
+
 .accent span {
     color: var(--accent-color);
 }
@@ -28,21 +64,38 @@ body {
 }
 
 .logo {
+    margin-right: 93px;
+
     text-decoration: none;
     color: var(--accent-color);
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 26px;
     line-height: 31px;
-    etter-spacing: 0.03em;
+    letter-spacing: 0.03em;
 }
 
-/* НАВИГАЦИЯ */
-.header li {
-    list-style-type: none;
+.menu .item {
+    list-style: none;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.menu > .item + .item {
+    margin-left: 50px;
 }
 
-.nav-link {
+
+.contacts .item {
+    list-style: none;
+}
+.contacts > .item:not(:last-child) {
+    margin-right: 50px;
+}
+.contacts {
+    margin-left: auto;
+}
+
+.menu-link {
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
@@ -51,15 +104,8 @@ body {
     text-decoration: none;
 }
 
-.nav-link:hover, 
-.nav-link:focus,
-.contact:hover,
-.contact:focus {
-    color: var(--accent-color);
-}
 
-
-.contact {
+.contact-link{
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
@@ -68,32 +114,45 @@ body {
     color: var(--main-color);
 }
 
+.menu-link:hover, .menu-link:focus,
+.contact-link:hover, .contact-link:focus {
+    color: var(--accent-color);
+}
+
 
 /* ГЕРОЙ */
 .hero {
     background-color: var(--background-hero);
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .hero-title {
-    font-family: Roboto;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 696px;
+
     color: var(--additional-color);
     font-weight: 900;
     font-size: 44px;
-    line-height: 136%;
-    text-align: center;
+    line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    
 }
 
 .hero-button {
+    padding: 10px 32px;
+    border: none;
+    border-radius: 4px;
+    
     background-color: var(--accent-color);
     color: var(--additional-color);
     font-weight: bold;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.06em;
-    text-align: center;
 }
 
 
@@ -106,8 +165,9 @@ body {
 }
 
 /* ОСОБЕННОСТИ */
-.features li {
+.features ul {
     list-style-type: none;
+    padding-left: 0;
 }
 
 .features h2 {
@@ -134,21 +194,11 @@ body {
     line-height: 24px;
     letter-spacing: 0.03em;
 }
-/* НАШИ ПРЕИМУЩЕСТВА */
-.our-advantages li {
-    list-style: none;
-}
 
-.our-advantages > .title {
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    letter-spacing: 0.03em;
-}
 /* ЧЕМ МЫ ЗАНИМАЕМСЯ */
-.whatwedo li {
+.whatwedo ul {
     list-style: none;
+    padding-left: 0;
 }
 
 .whatwedo-title {
@@ -161,24 +211,26 @@ body {
 }
 
 /* НАША КОМАНДА */
-.team {
+.our-team {
     background-color: var(--background-team);
 }
 
-.team li{
+.our-team ul {
     list-style: none;
+    padding-left: 0;
 }
 
-.team > .title {
+.team-title {
     color: var(--title-color);
     font-weight: bold;
     font-size: 36px;
     line-height: 42px;
-    letter-spacing: 0.03em;
     text-align: center;
+    letter-spacing: 0.03em;
 }
 
-.team-title {
+
+.photo-title {
     color: var(--title-color);
     font-style: normal;
     font-weight: 500;
@@ -187,7 +239,7 @@ body {
     letter-spacing: 0.03em;
 }
 
-.team-text {
+.photo-text {
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
@@ -196,7 +248,7 @@ body {
 }
 
 /* ПОРТФОЛИО */
-.portfolio li{
+.portfolio ul{
     list-style: none;   
 }
 
@@ -212,12 +264,13 @@ body {
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em
-    font-family: inherit;
 }
+
 .contact-link:hover, 
 .contact-link:focus {
     color: var(--accent-color);
 }
+
 .link-button:hover, 
 .link-button:focus {
     background-color: var(--accent-color);
@@ -246,8 +299,9 @@ body {
 
 
 /* ПОДВАЛ  */
-.footer li {
+.footer ul {
     list-style: none;
+    padding-left: 0;
 }
 
 .footer address {
