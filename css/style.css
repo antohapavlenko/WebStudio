@@ -7,6 +7,7 @@
     --background-hover: #188CE8;
     --additional-color: #ffffff;
     --background-team: #F5F4FA;
+    --portfolio-border: #EEEEEE;
 } 
 
 /* ОБЩИЕ КЛАССЫ */
@@ -173,8 +174,12 @@ img {
 /* ОСОБЕННОСТИ */
 .features-flex {
     display: flex;
+    padding-top: 94px;
 }
 
+.features-title {
+    margin-bottom: 10px;
+}
 .features ul {
     list-style-type: none;
     padding-left: 0;
@@ -291,6 +296,7 @@ img {
 }
 
 .our-team .item {
+    background-color:var(--additional-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
@@ -357,7 +363,8 @@ img {
 .filter-flex {
     display: flex;
     justify-content:center;
-    padding-bottom: 34px;  
+    margin-bottom: 50px; 
+    padding-left: 0; 
 }
 
 .filter-button {
@@ -400,28 +407,35 @@ img {
 .portfolio-flex {
     display: flex;
     flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
 }
 
 .portfolio-flex .item {
     width: 370px;
-    flex-basis: calc(100% / 3);
+    margin-bottom: 30px;
+    margin-right: 30px;
+    flex-basis: calc((100% - 90px) / 3);
 }
 
-.portfolio-flex h3,
-.portfolio-flex p {
-    padding-left: 24px;
+.portfolio-flex {
+    padding-left: 0;
 }
 
 .portfolio-border {
-    border-left: 1px solid var(--background-team);
-    border-right: 1px solid var(--background-team);
-    border-bottom: 1px solid var(--background-team);
+    padding: 20px 24px;
+    box-sizing: border-box;
+    border-left: 1px solid var(--portfolio-border);
+    border-right: 1px solid var(--portfolio-border);
+    border-bottom: 1px solid var(--portfolio-border);
 }
 .portfolio-filter {
     text-decoration: none;
 }
 
 .portfolio-title {
+    margin-bottom: 4px;
+
     font-weight: bold;
     font-size: 18px;
     line-height: 36px;
