@@ -84,10 +84,23 @@ img {
 }
 
 .menu .item {
+    position: relative;
     list-style: none;
     padding-top: 32px;
     padding-bottom: 32px;
 }
+
+.menu-underline::after {
+    display: inline-flex;
+    position: absolute;
+    bottom: 0;
+    content: " ";
+    border: 2px solid var(--accent-color);
+    background-color: var(--accent-color);
+    border-radius: 50px;
+    width: 100%;
+}
+
 .menu > .item + .item {
     margin-left: 50px;
 }
@@ -196,6 +209,10 @@ img {
 }
 
 /* ОСОБЕННОСТИ */
+
+.features h2 {
+    display: none;
+}
 .thumb {
     background-color: var(--background-team);
     border-radius: 4px;
@@ -256,6 +273,21 @@ img {
 
 .whatwedo-flex {
     display: flex;
+}
+
+.whatwedo-flex .item {
+    position: relative;
+}
+
+.whatwedo-flex p {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 27px 82px;
+    color: var(--additional-color);
+    background-color: rgba(47, 48, 58, 0.8);;
 }
 
 .whatwedo .item + .item {
@@ -470,6 +502,10 @@ img {
 
 
 /* ПОРТФОЛИО */
+.portfolio h1 {
+    display: none;
+}
+
 .filter-flex {
     display: flex;
     justify-content:center;
@@ -548,6 +584,32 @@ img {
 }
 .portfolio-filter {
     text-decoration: none;
+}
+
+.portfolio-discription {
+    position: relative;
+}
+
+.portfolio-discription p {
+    position: absolute;
+    padding: 63px 24px;
+    color: var(--additional-color);
+    background-color: rgba(33, 150, 243, 0.9);
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+}
+
+.portfolio-discription p:hover {
+    opacity: 1;
 }
 
 .portfolio-title {
