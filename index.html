@@ -15,11 +15,10 @@
    <header class="header">
        <div class="container">
             <nav class="nav">
-                <a href="#" class="logo"><span>Web</span>Studio</a>
+                <a href="/index.html" class="logo"><span>Web</span>Studio</a>
                 <ul class="menu">
                     <li class="item">
-                        <a class="menu-link accent" href="./index.html"><span>Студия</span></a>
-                        <p class="menu-underline"></p>
+                        <a class="menu-link accent" href="./index.html"><span>Студия</span><p class="menu-underline"></p></a>
                     </li>
                     <li class="item">
                         <a class="menu-link" href="./portfolio.html">Портфолио</a>
@@ -332,7 +331,12 @@
         <!-- МОДАЛЬНОЕ ОКНО -->
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <button type="button" data-modal-close>Закрыть</button> 
+                
+                <button type="button" data-modal-close>
+                    <svg class="icon" width="11" height="11">
+                        <use href="../img/icons.svg#icon-modal-close"></use>
+                    </svg>
+                </button> 
             </div>
         </div>
     </main>
@@ -340,7 +344,7 @@
     <!-- footer -->
     <footer class="footer">
         <div class="footer-flex container">
-            <div>
+            <div class="footer-contacts">
                 <a href="/" class="logo"><span>Web</span>Studio</a>
                 <address>
                     <p>г. Киев, пр-т Леси Украинки, 26</p>
@@ -382,6 +386,15 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div class="email">
+                <b>Подпишитесь на рассылку</b>
+                <input type="email" placeholder="E-mail">
+                <button type="button">Подписатся
+                    <svg class="icon" width="24" height="24">
+                        <use href="../img/icons.svg#icon-telegram"></use>
+                    </svg>
+                </button>
             </div>
         </div>
     </footer>
