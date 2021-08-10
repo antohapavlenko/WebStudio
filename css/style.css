@@ -581,7 +581,8 @@ img {
     fill: var(--additional-color);
 }
 
-.footer-icon .icon-bg:hover {
+.footer-icon .icon-bg:hover,
+.footer-icon .icon-bg:focus {
     background-color: var(--background-hover);
 }
 
@@ -615,12 +616,18 @@ img {
 
 }
 
+.email__button {
+    display: flex;
+    flex-direction: row;
+    
+}
+
 .email input {
     width: auto;
     padding-left: 16px;
     height: 50px;
     margin-right: 12px;
-    min-width:354px;
+    width: 354px;
     color: var(--additional-color);
     background-color: var(--background-hero);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -632,7 +639,6 @@ img {
 .email input::placeholder {
     font-weight: normal;
     font-size: 16px;
-    line-height: 20px;
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -645,7 +651,6 @@ img {
     padding: 10px 62px 10px 29px;
     font-weight: bold;
     font-size: 16px;
-    line-height: 30px;
     letter-spacing: 0.06em;
     background-color: var(--accent-color);
     color: var(--additional-color);
