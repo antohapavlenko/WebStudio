@@ -24,7 +24,7 @@
                         <a class="menu-link" href="./portfolio.html">Портфолио</a>
                     </li>
                     <li class="item">
-                        <a class="menu-link" href="/">Контакты</a>
+                        <a class="menu-link" href="#1">Контакты</a>
                     </li>
                 </ul>
             </nav>
@@ -331,12 +331,54 @@
         <!-- МОДАЛЬНОЕ ОКНО -->
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                
-                <button type="button" data-modal-close>
+                <button type="button" class="close-button"  data-modal-close>
                     <svg class="icon" width="11" height="11">
                         <use href="../img/icons.svg#icon-modal-close"></use>
                     </svg>
                 </button> 
+                    <div class="input-form">
+                        <form action="">
+                            <b>Оставьте свои данные, мы вам перезвоним</b>
+                        
+                            <div class="input-fill">
+                                <label for="name">Имя</label>
+                                <input type="text" name="name" id="name">
+                                <svg class="icon" width="12" height="12">
+                                    <use href="../img/icons.svg#icon-modal-name"></use>
+                                </svg>
+                            </div>
+                        
+                            <div class="input-fill">
+                                <label for="tell">Телефон</label>
+                                <input type="tel" name="tel" id="tel">
+                                <svg class="icon" width="13" height="13">
+                                    <use href="../img/icons.svg#icon-modal-phone"></use>
+                                </svg>
+                            </div>
+                        
+                            <div class="input-fill">
+                                <label for="email">Почта</label>
+                                <input type="email" name="email" id="email">
+                                <svg class="icon" width="15" height="12">
+                                    <use href="../img/icons.svg#icon-modal-mail"></use>
+                                </svg>
+                            </div>
+
+                            <div class="textarea">
+                                <label for="comment">Комментарий</label>
+                                <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
+                            </div>
+
+                            <label class="check">Соглашаюсь с рассылкой и принимаю 
+                                <a href="">Условия договора</a>
+                                <input class="check__input" type="checkbox" name="check" required>
+                                <span class="check__box"></span>
+                            </label>
+                            
+                            <button type="submit" class="submit-button">Отправить</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -387,7 +429,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="email">
+            <div class="email" id="1">
                 <b>Подпишитесь на рассылку</b>
                 <input type="email" placeholder="E-mail">
                 <button type="button">Подписатся
