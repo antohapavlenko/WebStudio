@@ -1,0 +1,37 @@
+.whatwedo__title {
+    margin-bottom: 50px;
+
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $title-color;
+}
+
+.whatwedo__content {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.whatwedo__item {
+    position: relative;
+}
+
+.whatwedo__text {
+    position: absolute;
+    
+    left: 0;
+    bottom: 0;
+    padding: 27px 82px;
+    width: 100%;
+
+    color: $additional-color;
+    background-color: rgba(47, 48, 58, 0.8);;
+}
+
+.whatwedo__item + .whatwedo__item {
+    margin-left: 30px;
+}

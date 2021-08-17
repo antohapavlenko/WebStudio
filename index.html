@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Веб-студия</title>
 </head>
 
@@ -372,7 +372,7 @@
         <!-- МОДАЛЬНОЕ ОКНО -->
         <div class="modal__backdrop is-hidden" data-modal>
             <div class="modal">
-                <button type="button" class="modal__close" data-modal-close>
+                <button type="button" class="close__button" data-modal-close>
                     <svg width="11" height="11">
                         <use href="../img/icons.svg#icon-modal-close"></use>
                     </svg>
@@ -411,7 +411,7 @@
                     </div>
 
                     <label class="modal__checkbox">Соглашаюсь с рассылкой и принимаю
-                        <a href="">Условия договора</a>
+                        <a class="modal__link" href="">Условия договора</a>
                         <input class="modal__check" type="checkbox" name="check" required>
                         <span class="modal__checker"></span>
                     </label>

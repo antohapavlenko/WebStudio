@@ -65,7 +65,6 @@ ul {
 
 .header__logo {
     margin-right: 93px;
-
     text-decoration: none;
     color: var(--logo-color);
     font-family: 'Raleway', sans-serif;
@@ -472,6 +471,10 @@ ul {
 
 
 
+
+
+
+
 /*МОДАЛЬНОЕ ОКНО */
 .modal__backdrop {
     position: fixed;
@@ -508,7 +511,7 @@ ul {
     border-radius: 4px;
 }
     
-.close-button {
+.close__button {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -519,82 +522,13 @@ ul {
     border-radius: 50%;
 }
 
-.close-button:hover, .close-button:focus {
+.close__button:hover, .close__button:focus {
     fill: var(--accent-color);
     outline: none;
     border: 1px solid var(--accent-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*МОДАЛЬНОЕ ОКНО */
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.modal {
-    transform: translate(-50%, -50%) scale(0.8);
-    
-}
-
-.modal {
-    position: fixed;
-    display: inline-block;
-    padding: 40px;
-    width: 528px;
-    height: 581px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    background-color: var(--additional-color); 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 4px;
-}
-    
-.modal__close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: var(--additional-color);
-    border-radius: 50%;
-}
-
-.modal__close:hover, .modal__close:focus {
-    fill: var(--accent-color);
-    outline: none;
-    border: 1px solid var(--accent-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);;
-}
-
 
 
 

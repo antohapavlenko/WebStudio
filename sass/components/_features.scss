@@ -1,0 +1,44 @@
+.features h2 {
+    display: none;
+}
+
+.features__content {
+    display: flex;
+    padding-top: 94px;
+}
+
+.features__item + .features__item {
+    margin-left: 30px;
+}
+
+.features__thumb {
+    background-color: $background-team;
+    border-radius: 4px;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+
+.features__title {
+    width: 270px;
+    margin-bottom: 10px;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase; 
+
+    color: $title-color;
+}
+
+.features__text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+}
+
+.features__icon {
+    margin: 25px 100px 25px 100px;
+}
