@@ -50,7 +50,7 @@
     color: #ffffff99;
     text-decoration: none;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition1(color);
 }
 
 .footer__link:hover, .footer__link:focus {
