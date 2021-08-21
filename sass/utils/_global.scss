@@ -14,17 +14,45 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    height: auto;
+}
+
+img {
+    display: block;
+    width: 100%;
 }
 
 .container {
-    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @media screen and (min-width: $mobile) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
+    

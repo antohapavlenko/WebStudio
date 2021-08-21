@@ -13,6 +13,6 @@
 
 @mixin transition3($property1, $property2, $property3) {
      transition-property: $property1, $property2, $property3;
-     transition-duration: 250ms;
+     transition-duration: 2500ms;
      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

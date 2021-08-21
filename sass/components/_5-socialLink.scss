@@ -1,6 +1,6 @@
 .social {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
  .social__link {
@@ -11,8 +11,8 @@
     width: 44px;
     height: 44px;
     border-radius: 50%; 
-    
     fill: $social-link-img;
+    
     @include transition2(background-color, fill);
 
     &:hover,

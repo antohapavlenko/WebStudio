@@ -1,3 +1,8 @@
+.team {
+    background-color: $background-team;
+    text-align: center;
+}
+
 .team__title {
     margin-bottom: 50px;
 
@@ -11,25 +16,56 @@
 }
 
 .team__wrapper {
-    display: flex;
+    @media screen and (min-width: $mobile) {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+.team__thumb {
+    @media screen and (min-width: $mobile) {
+    margin: 0 15px 0px 15px;
+    
+    }
+
+    @media screen and (min-width: $tablet) {
+        &:nth-child(-n +2) {
+            margin-bottom: 30px;
+        }
+        width: 354px
+    }
+
+    @media screen and (min-width: $desktop) {
+        &:nth-child(-n +2) {
+            margin-bottom: 0;
+        }
+        width: 270px;
+        margin: 0;
+    }
 }
 
 .team__thumb + .team__thumb {
-    margin-left: 30px;
+    @media screen and (max-width: 767px) {
+        margin-top: 30px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-top: 0
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 30px;
+    }
 }
-
-
-.team {
-    background-color: $background-team;
-    text-align: center;
-}
-
-.team__wrapper {
-    list-style: none;
-    padding-left: 0;
-}
-
-
 
 .team__name {
     margin-bottom: 10px;
@@ -61,3 +97,4 @@
 .team__content {
     padding: 30px 32px;
 }
+

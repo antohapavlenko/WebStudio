@@ -2,13 +2,50 @@
     border-bottom: 1px solid #ECECEC
 }
 
-.header__menu, .header__nav {
+.header__wrapper {
+    display: flex;
+}
+
+.header__nav {
     display: flex;
     padding-left: 0;
     align-items: center;
 }
 
+.header__menu {
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        padding-left: 0;
+        align-items: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        padding-left: 0;
+        align-items: center;
+    }
+    
+}
+
+
 .header__logo {
+    @media screen and (min-width: $mobile) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-left: 15px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        padding-left: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        
+    }
     margin-right: 93px;
 
     text-decoration: none;
@@ -20,8 +57,17 @@
     letter-spacing: 0.03em;
 }
 /* Навигация */
-.header__wrapper {
-    display: flex;
+
+.header__item {
+    position: relative;
+    list-style: none;
+    
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.header__item + .header__item {
+    margin-left: 50px;
 }
 
 .header__link {
@@ -52,13 +98,6 @@
     color: $accent-color;
 }
 
-.header__item {
-    position: relative;
-    list-style: none;
-    
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
 
 .header__link--underline::after {
     position: absolute;
@@ -71,15 +110,28 @@
     border-radius: 50px;
 }
 
-.header__item + .header__item {
-    margin-left: 50px;
-}
+
 /* Контакты */
 .contacts__wrapper {
-    display: flex;
-    margin-left: auto;
-    padding-left: 0;
-    align-items: center;
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+    
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 84px;
+    }      
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        margin-left: auto;
+        padding-left: 0;
+        align-items: center;
+        flex-direction: row;
+    }
+    
 }
 
 .contacts__item:not(:last-child) {
