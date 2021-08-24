@@ -35,6 +35,13 @@
                         <a class="header__link" href="/">Контакты</a>
                     </li>
                 </ul>
+                <div class="conteiner">
+                    <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg width="20" height="20" aria-label="Переключатель мобильного меню">
+                            <use class="icon-menu" href="../img/icons.svg#icon-burger"></use>
+                        </svg>
+                    </button>
+                </div>
             </nav>
             <!--Контакты  -->
             <ul class="contacts__wrapper">
@@ -76,7 +83,7 @@
 
 
         <!-- Особенности -->
-        <section class="features">
+        <section class="features section">
             <h2>Особенности</h2>
 
             <div class="container">
@@ -323,58 +330,60 @@
 
 
         <!-- ПОСТОЯННЫЕ КЛИЕНТЫ -->
-        <section class="clients container section">
-            <h2 class="clients__title">Постоянные клиенты</h2>
-
-            <ul class="clients__wrapper">
-                <li class="clients__item">
-                    <a class="clients__link" href="">
-                        <svg width="106" height="60">
-                            <use href="../img/icons.svg#icon-1"></use>
-                        </svg>
-                    </a>
-                </li>
-
-                <li class="clients__item">
-                    <a class="clients__link" href="">
-                        <svg width="106" height="60">
-                            <use href="../img/icons.svg#icon-2"></use>
-                        </svg>
-                    </a>
-                </li>
-
-                <li class="clients__item">
-                    <a class="clients__link" href="">
-                        <svg width="106" height="60">
-                            <use href="../img/icons.svg#icon-3"></use>
-                        </svg>
-                    </a>
-                </li>
-
-                <li class="clients__item">
-                    <a class="clients__link" href="">
-                        <svg width="106" height="60">
-                            <use href="../img/icons.svg#icon-4"></use>
-                        </svg>
-                    </a>
-                </li>
-
-                <li class="clients__item">
-                    <a class="clients__link" href="">
-                        <svg width="106" height="60">
-                            <use href="../img/icons.svg#icon-5"></use>
-                        </svg>
-                    </a>
-                </li>
-
-                <li class="clients__item">
-                    <a class="clients__link" href="">
-                        <svg width="106" height="60">
-                            <use href="../img/icons.svg#icon-6"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
+        <section class="clients section">
+            <div class="container">
+                <h2 class="clients__title">Постоянные клиенты</h2>
+                
+                <ul class="clients__wrapper">
+                    <li class="clients__item">
+                        <a class="clients__link" href="">
+                            <svg width="106" height="60">
+                                <use href="../img/icons.svg#icon-1"></use>
+                            </svg>
+                        </a>
+                    </li>
+                
+                    <li class="clients__item">
+                        <a class="clients__link" href="">
+                            <svg width="106" height="60">
+                                <use href="../img/icons.svg#icon-2"></use>
+                            </svg>
+                        </a>
+                    </li>
+                
+                    <li class="clients__item">
+                        <a class="clients__link" href="">
+                            <svg width="106" height="60">
+                                <use href="../img/icons.svg#icon-3"></use>
+                            </svg>
+                        </a>
+                    </li>
+                
+                    <li class="clients__item">
+                        <a class="clients__link" href="">
+                            <svg width="106" height="60">
+                                <use href="../img/icons.svg#icon-4"></use>
+                            </svg>
+                        </a>
+                    </li>
+                
+                    <li class="clients__item">
+                        <a class="clients__link" href="">
+                            <svg width="106" height="60">
+                                <use href="../img/icons.svg#icon-5"></use>
+                            </svg>
+                        </a>
+                    </li>
+                
+                    <li class="clients__item">
+                        <a class="clients__link" href="">
+                            <svg width="106" height="60">
+                                <use href="../img/icons.svg#icon-6"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- МОДАЛЬНОЕ ОКНО -->
@@ -429,6 +438,40 @@
             </div>
         </div>
     </main>
+
+
+
+
+
+
+<div class="menu-container js-menu-container" id="mobile-menu">
+    <button type="button" class="menu-toggle js-close-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="20" height="20" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="../img/icons.svg#icon-modal-close"></use>
+        </svg>
+    </button>
+
+    <ul class="mobile-menu">
+        <li>Студия</li>
+        <li>Портфолио</li>
+        <li>Контакты</li>
+        <li><a class="contacts__link mobile-phone" href="mailto:info@devstudio.com">info@example.com</a></li>
+        <li><a class="contacts__link mobile-mail" href="tel:+380991111111">+38 099 111 11 11</a></li>
+        <div>
+            <ul class="mobile-social">
+                <li class="mobile-instagram">Instagram</li>
+                <li class="mobile-Twitter">Twitter</li>
+                <li class="mobile-Facebook">Facebook</li>
+                <li class="mobile-Linkedin">Linkedin</li>
+            </ul>
+        </div>
+    </ul>
+</div>  
+
+
+
+
+
 
     <!-- Подвал -->
     <footer class="footer">
@@ -495,6 +538,7 @@
         </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
-</html>
+</html> 

@@ -4,10 +4,6 @@
 }
 
  .social__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     width: 44px;
     height: 44px;
     border-radius: 50%; 
@@ -20,4 +16,13 @@
         background-color: $accent-color;
         fill: $additional-color;
     }
+    
+    @media screen and (min-width: $mobile) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+    
 }

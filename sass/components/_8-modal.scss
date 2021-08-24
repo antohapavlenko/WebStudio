@@ -21,18 +21,16 @@
 }
 
 .modal {
-    @media screen and (min-width: $mobile) {
-        position: fixed;
-        display: inline-block;
-        padding: 40px;
-        width: 450px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%) scale(1);
-        background-color: $additional-color; 
-        border-radius: 4px;
-        @include transition1(transform);
-    }
+    position: fixed;
+    display: inline-block;
+    padding: 40px;
+    width: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background-color: $additional-color; 
+    border-radius: 4px;
+    @include transition1(transform);
 
     @media screen and (min-width: $tablet) {
         width: 450px;
@@ -116,13 +114,11 @@
 }
 
 .modal__input {
-    @media screen and (min-width: $mobile) {
-        height: 40px;
-        width: 370px;
-        padding: 11px 12px 11px 42px;
-        border: 1px solid rgba(33, 33, 33, 0.2);
-        border-radius: 4px;
-    }
+    height: 40px;
+    width: 370px;
+    padding: 11px 12px 11px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
 
     @media screen and (min-width: $tablet) {
         width: 370px;
@@ -143,14 +139,12 @@
 }
 
 .modal__textarea {
-    @media screen and (min-width: $mobile) {
-        padding: 12px 14px;
-        width: 370px;
-        height: 120px;
-        border: 1px solid rgba(33, 33, 33, 0.2);
-        border-radius: 4px;
-        resize: none; 
-    }
+    padding: 12px 14px;
+    width: 370px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none; 
 
     @media screen and (min-width: $tablet) {
         width: 370px;
@@ -175,17 +169,14 @@
 }
 
 .modal__checkbox {
-    @media screen and (min-width: $mobile) {
-        position: relative;
-        margin-bottom: 30px;
-        padding-left: 23px;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 0.03em;
-        color: #757575;
-        
-    }
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 23px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    color: #757575; 
 
     @media screen and (min-width: $tablet) {
         
@@ -206,18 +197,13 @@
 }
 
 .modal__checker {
-    @media screen and (min-width: $mobile) {
-        position: absolute;
-        width: 16px;
-        height: 15px;
-        left: 0;
-        top: -1px;
-        background-image: url(../img/border.svg);
-    }
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    left: 0;
+    top: -1px;
+    background-image: url(../img/border.svg);
 
-    @media screen and (min-width: $tablet) {
-        
-    }
 
     @media screen and (min-width: $desktop) {
         width: 16px;
@@ -229,14 +215,12 @@
 }
 
 .modal__check:checked + .modal__checker {
-    @media screen and (min-width: $mobile) {
-        position: absolute;
-        width: 16px;
-        height: 15px;
-        left: 0;
-        top: -1px;
-        background-image: url(../img/check.svg);
-    }
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    left: 0;
+    top: -1px;
+    background-image: url(../img/check.svg);
 
     @media screen and (min-width: $tablet) {
         
