@@ -59,10 +59,12 @@
     padding-top: 32px;
     padding-bottom: 32px;
 }
-
-.header__item + .header__item {
+@media screen and (min-width: $tablet) {
+    .header__item + .header__item {
     margin-left: 50px;
 }
+}
+
 
 .header__link {
     text-decoration: none;

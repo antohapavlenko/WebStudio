@@ -1,6 +1,7 @@
 /*МОДАЛЬНОЕ ОКНО */
 .modal__backdrop {
     position: fixed;
+    z-index: 5;
     top: 0;
     left: 0;
     width: 100%;
@@ -21,10 +22,11 @@
 }
 
 .modal {
-    position: fixed;
+    position: absolute;
     display: inline-block;
     padding: 40px;
-    width: auto;
+    width: 100%;
+    max-width: 450px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -32,14 +34,8 @@
     border-radius: 4px;
     @include transition1(transform);
 
-    @media screen and (min-width: $tablet) {
-        width: 450px;
-        height: 609px;
-    }
-
     @media screen and (min-width: $desktop) {
-        width: 528px;
-        height: 581px;
+        max-width: 528px;
     }
 }
     
@@ -115,17 +111,14 @@
 
 .modal__input {
     height: 40px;
-    width: 370px;
+    width: 100%;
+    max-width: 370px;
     padding: 11px 12px 11px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
-    @media screen and (min-width: $tablet) {
-        width: 370px;
-    }
-
     @media screen and (min-width: $desktop) {
-        width: 448px;
+        max-width: 448px;
     }
     
     &:focus {
@@ -140,18 +133,16 @@
 
 .modal__textarea {
     padding: 12px 14px;
-    width: 370px;
+    width: 100%;
+    max-width: 370px;
     height: 120px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none; 
 
-    @media screen and (min-width: $tablet) {
-        width: 370px;
-    }
-
     @media screen and (min-width: $desktop) {
-        width: 448px;
+        width: 100%;
+        max-width: 448px;
     }   
 }
 

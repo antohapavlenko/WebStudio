@@ -25,18 +25,25 @@
                 <!-- Навишация -->
                 <ul class="header__menu">
                     <li class="header__item">
-                        <a class="header__link" href="./index.html"><span>Студия</span>
-
-                        </a>
+                        <a class="header__link" href="./index.html"><span>Студия</span></a>
                     </li>
                     <li class="header__item">
-                        <a class="header__link header__link--current" href="./portfolio.html">Портфолио</a>
+                        <a class="header__link header__link--current" href="./portfolio.html">Портфолио
                         <p class="header__link--underline"></p>
+                        </a>
                     </li>
                     <li class="header__item">
                         <a class="header__link" href="/">Контакты</a>
                     </li>
                 </ul>
+                <div class="conteiner">
+                    <button type="button" class="menu-toggle js-open-menu" aria-expanded="false"
+                        aria-controls="mobile-menu">
+                        <svg width="20" height="20" aria-label="Переключатель мобильного меню">
+                            <use class="icon-menu" href="../img/icons.svg#icon-burger"></use>
+                        </svg>
+                    </button>
+                </div>
             </nav>
             <!--Контакты  -->
             <ul class="contacts__wrapper">
@@ -224,6 +231,49 @@
         </section>
     </main>
 
+
+
+
+<!-- МОБИЛЬНОЕ МЕНЮ -->
+<div class="menu-container js-menu-container" id="mobile-menu">
+    <button type="button" class="menu-toggle js-close-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="20" height="20" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="../img/icons.svg#icon-mobile-close"></use>
+        </svg>
+    </button>
+
+    <ul class="mobile-menu">
+        <li>
+            <a class="header__link  mobile-font" href="./index.html"><span>Студия</span></a>
+        </li>
+        <li>
+            <a class="header__link header__link--current mobile-font" href="./portfolio.html">Портфолио</a>
+        </li>
+        <li>
+            <a class="header__link mobile-font" href="/">Контакты</a>
+        </li>
+    </ul>
+    <ul class="mobile-contacts">
+        <li><a class="contacts__link mobile-phone" href="mailto:info@devstudio.com">info@example.com</a></li>
+        <li><a class="contacts__link mobile-mail" href="tel:+380991111111">+38 099 111 11 11</a></li>
+    </ul>
+    <ul class="mobile-social">
+        <li class="mobile-instagram">Instagram</li>
+        <li class="mobile-Twitter">Twitter</li>
+        <li class="mobile-Facebook">Facebook</li>
+        <li class="mobile-Linkedin">Linkedin</li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
     <!-- footer -->
     <footer class="footer">
         <div class="footer__wrapper container">
@@ -286,6 +336,12 @@
             </div>
         </div>
     </footer>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous">
+        </script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

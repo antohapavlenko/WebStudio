@@ -141,8 +141,10 @@ img {
   padding-bottom: 32px;
 }
 
-.header__item + .header__item {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .header__item + .header__item {
+    margin-left: 50px;
+  }
 }
 
 .header__link {
@@ -562,13 +564,16 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .team__thumb:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team__thumb {
     margin: 15px;
     width: calc((100% - 60px) / 2);
-  }
-  .team__thumb:nth-child(-n +2) {
-    margin-bottom: 30px;
   }
 }
 
@@ -693,6 +698,7 @@ img {
 /*МОДАЛЬНОЕ ОКНО */
 .modal__backdrop {
   position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -718,10 +724,11 @@ img {
 }
 
 .modal {
-  position: fixed;
+  position: absolute;
   display: inline-block;
   padding: 40px;
-  width: auto;
+  width: 100%;
+  max-width: 450px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
@@ -738,17 +745,9 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) {
-  .modal {
-    width: 450px;
-    height: 609px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
-    height: 581px;
+    max-width: 528px;
   }
 }
 
@@ -824,21 +823,16 @@ img {
 
 .modal__input {
   height: 40px;
-  width: 370px;
+  width: 100%;
+  max-width: 370px;
   padding: 11px 12px 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 
-@media screen and (min-width: 768px) {
-  .modal__input {
-    width: 370px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .modal__input {
-    width: 448px;
+    max-width: 448px;
   }
 }
 
@@ -853,22 +847,18 @@ img {
 
 .modal__textarea {
   padding: 12px 14px;
-  width: 370px;
+  width: 100%;
+  max-width: 370px;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
 }
 
-@media screen and (min-width: 768px) {
-  .modal__textarea {
-    width: 370px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .modal__textarea {
-    width: 448px;
+    width: 100%;
+    max-width: 448px;
   }
 }
 
@@ -990,6 +980,7 @@ img {
 
 /* ПОДВАЛ  */
 .footer {
+  z-index: 1;
   background-color: #2F303A;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1488,25 +1479,18 @@ img {
           transform: translateY(0);
 }
 
-@media screen and (max-width: 767px) {
-  .menu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-transform: translatex(100%);
-            transform: translatex(100%);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 47px;
-    letter-spacing: 0.02em;
-    color: #212121;
-    background-color: #ece0dd;
-  }
+.menu-container {
+  position: fixed;
+  overflow-y: scroll;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translatex(100%);
+          transform: translatex(100%);
+  color: #212121;
+  background-color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
@@ -1516,14 +1500,20 @@ img {
 }
 
 .menu-container.is-open {
+  display: block;
   -webkit-transform: translatex(0);
           transform: translatex(0);
 }
 
 .menu-toggle {
-  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  margin: 0;
+  padding: 0;
   border: none;
-  border-radius: 4px;
+  font-size: small;
+  background-color: #ffffff;
   fill: #212121;
 }
 
@@ -1531,8 +1521,32 @@ img {
   fill: #2196F3;
 }
 
-.js-close-menu {
-  margin-left: 450px;
+.mobile-menu li:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu {
+  width: 100vw;
+  margin-top: 48px;
+  margin-bottom: 306px;
+  margin-left: 40px;
+}
+
+.mobile-font {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+}
+
+.mobile-contacts li:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contacts {
+  margin-bottom: 64px;
+  margin-left: 40px;
 }
 
 .mobile-phone {
@@ -1556,6 +1570,14 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 40px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
   color: #2196F3;
 }
 
